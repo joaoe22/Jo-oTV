@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JoãoTV</title>
+
+    <!-- Link para a fonte Alatsi do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Alatsi&display=swap" rel="stylesheet">
+
+    <style>
+        /* Estilo para o header com a fonte Alatsi e contorno branco */
+        header {
+            font-family: 'Alatsi', sans-serif;
+            font-size: 5em;
+            position: absolute;
+            top: 20px;
+            left: 10px;
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            text-shadow: 
+                2px 2px 0px #fff, 
+                -2px -2px 0px #fff, 
+                2px -2px 0px #fff, 
+                -2px 2px 0px #fff;
+            cursor: pointer; /* Aplica um estilo de ponteiro para indicar que é clicável */
+        }
+
+        .play-triangle {
+            width: 0;
+            height: 0;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            border-left: 30px solid #FFFFFF;
+            margin-left: 10px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            background-color: #181818;
+            color: #fff;
+            padding-top: 120px;
+            overflow-x: hidden; /* Garante que o texto não ultrapasse a tela */
+        }
+
+        .subheader {
+            font-family: 'Alatsi', sans-serif;
+            font-size: 2em;
+            margin-top: 20px;
+            color: #FFFFFF;
+            text-align: center;
+            text-shadow: 
+                1px 1px 0px #fff, 
+                -1px -1px 0px #fff, 
+                1px -1px 0px #fff, 
+                -1px 1px 0px #fff;
+        }
+
+        iframe {
+            width: 70%;
+            max-width: 960px;
+            height: 540px;
+            border: 5px solid #fff;
+            border-radius: 10px;
+            object-fit: cover;
+            transition: transform 0.3s ease; /* Adicionando transição suave */
+        }
+
+        iframe:hover {
+            transform: scale(1.1); /* Aumenta o vídeo ao passar o mouse */
+        }
+
+        .video-row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .video-row iframe {
+            width: 200px;
+            height: 112px;
+            border: 3px solid #fff;
+            border-radius: 10px;
+            object-fit: cover;
+            transition: transform 0.3s ease; /* Adicionando transição suave */
+        }
+
+        .video-row iframe:hover {
+            transform: scale(1.1); /* Aumenta o vídeo ao passar o mouse */
+        }
+
+        /* Estilo do texto GOOOOOLLLLL!!! */
+        #gol-text {
+            position: absolute;
+            top: 50%; /* Alinha verticalmente */
+            left: -100%; /* Coloca o texto fora da tela à esquerda */
+            font-size: 6em; /* Aumentei o tamanho da fonte para garantir que seja muito visível */
+            font-family: 'Alatsi', sans-serif; /* Usando a mesma fonte de JoãoTV */
+            color: #ffffff; /* Cor do texto */
+            text-shadow: 
+                4px 4px 0px #000, 
+                -4px -4px 0px #000, 
+                4px -4px 0px #000, 
+                -4px 4px 0px #000; /* Contorno preto mais intenso */
+            white-space: nowrap;
+            animation: golMove 5s forwards; /* Animação do movimento do texto */
+            display: none; /* Inicialmente o texto está oculto */
+        }
+
+        @keyframes golMove {
+            0% {
+                left: -100%; /* Começa fora da tela à esquerda */
+            }
+            100% {
+                left: 100%; /* Termina fora da tela à direita */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        JoãoTV
+        <div class="play-triangle"></div>
+    </header>
+
+    <div class="subheader">Entretenimento de qualidade, é aqui!</div>
+
+    <!-- Vídeo principal -->
+    <iframe src="https://www.youtube.com/embed/At9XPCYzWwE" title="YouTube video player" allowfullscreen></iframe>
+
+    <div class="subheader" style="margin-top: 20px;">Seleção Brasileira</div>
+
+    <div class="video-row">
+        <iframe src="https://www.youtube.com/embed/P12StFWJFiY" title="YouTube video player" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/bVlXxhhOVl0" title="YouTube video player" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/iHZAGhvAasA" title="YouTube video player" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/ztb9iDv8PSI" title="YouTube video player" allowfullscreen></iframe>
+    </div>
+
+    <div class="subheader" style="margin-top: 40px;">Liberta e Sula</div>
+
+    <div class="video-row">
+        <iframe src="https://www.youtube.com/embed/pkYskYhecZc" title="YouTube video player" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/wVkl6YYQ3sA" title="YouTube video player" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/gLoY_zJQyuI" title="YouTube video player" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/p3D2DH5Dl5A" title="YouTube video player" allowfullscreen></iframe>
+    </div>
+
+    <!-- Seção Jogaços -->
+    <div class="subheader" style="margin-top: 40px;">Jogaços</div>
+
+    <div class="video-row">
+        <iframe src="https://www.youtube.com/embed/ZYXXMi92z9g" title="YouTube video player" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/zjPjNEZ45us" title="YouTube video player" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/O05LhbsnLH8" title="YouTube video player" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/gigQUI7LGvc" title="YouTube video player" allowfullscreen></iframe>
+    </div>
+
+    <!-- Texto de GOL ao clicar em JoãoTV -->
+    <div id="gol-text">GOOOOOOLLLLL!!!</div>
+
+    <script>
+        // Função para exibir o texto "GOOOOOOLLLLL!!!" ao clicar no header (JoãoTV)
+        document.getElementById("header").addEventListener("click", function() {
+            var golText = document.getElementById("gol-text");
+            golText.style.display = "block"; // Torna o texto visível
+            golText.style.animation = "golMove 5s forwards"; // Inicia a animação
+        });
+    </script>
+</body>
+</html>
